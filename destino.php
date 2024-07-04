@@ -1,8 +1,6 @@
 <?php
-// Verifica o método da requisição
 $method = $_SERVER['REQUEST_METHOD'];
 
-// Obtém os dados do formulário
 $nome = $_REQUEST['nome'] ?? '';
 $telefone = $_REQUEST['telefone'] ?? '';
 $email = $_REQUEST['email'] ?? '';
@@ -16,10 +14,10 @@ $mensagem = $_REQUEST['mensagem'] ?? '';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Dados Recebidos</title>
+    <title>Dados</title>
 </head>
 <body>
-    <h1>Dados Recebidos</h1>
+    <h1>Dados</h1>
     <div class="data">
         <p><strong>Nome:</strong> <?php echo htmlspecialchars($nome); ?></p>
         <p><strong>Telefone:</strong> <?php echo htmlspecialchars($telefone); ?></p>
@@ -28,7 +26,7 @@ $mensagem = $_REQUEST['mensagem'] ?? '';
     </div>
 
     <div class="headers">
-        <h2>Cabeçalhos HTTP</h2>
+        <h2>HTTP</h2>
         <pre><?php echo var_export(apache_request_headers()); ?></pre>
     </div>
 
